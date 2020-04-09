@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on, ActionReducerMap } from '@ngrx/store';
 import * as appActions from './item.actions';
 import { Item } from '../item';
 

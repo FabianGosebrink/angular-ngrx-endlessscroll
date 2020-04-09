@@ -1,5 +1,10 @@
 import { ItemEffects } from './item.effects';
-export * from './item.reducer';
+import { ActionReducerMap } from '@ngrx/store';
+import { AppState, itemReducer } from './item.reducer';
+
 export * from './item.selectors';
 
 export const itemEffects = [ItemEffects];
+export const appReducers: ActionReducerMap<AppState> = {
+  itemState: itemReducer,
+};
