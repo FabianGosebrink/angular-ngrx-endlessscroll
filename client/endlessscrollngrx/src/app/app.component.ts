@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from './item';
 import { Store, select } from '@ngrx/store';
-import { selectAllItems, selectIsLoading } from './store';
-import { getMoreItems, getItems } from './store/item.actions';
+import {
+  selectAllItems,
+  selectIsLoading,
+  getItems,
+  getMoreItems,
+} from './store';
 
 @Component({
   selector: 'app-root',

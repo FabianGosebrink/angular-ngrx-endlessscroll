@@ -19,7 +19,7 @@ export const initialState: ItemState = {
 export const itemReducer = createReducer(
   initialState,
 
-  on(appActions.getItems, (state) => {
+  on(appActions.getItems, appActions.getMoreItems, (state) => {
     return {
       ...state,
       loading: true,
