@@ -1,3 +1,3 @@
 ## Angular Ngrx Endlessscroll with ASP.NET Core
 
-![endlessscroll picture](.github/endlessscroll.gif)
+![endlessscroll-animation](.github/endlessscroll-2.gif)
