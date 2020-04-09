@@ -39,13 +39,9 @@ export class ItemEffects {
     this.actions$.pipe(
       ofType(appActions.getMoreItems),
       withLatestFrom(this.store.pipe(select(selectAllItemsLength))),
-      map(([{}, skip]) => {
-        return {
-          skip,
-        };
-      }),
-      switchMap((filter) =>
-        this.apiService.getAllItems(filter).pipe(
+      map(([{}, skip]) => skip),
+      switchMap((skip) =>
+        this.apiService.getAllItems({ skip }).pipe(
           map((result) => appActions.getItemsComplete({ payload: result })),
           catchError((error) =>
             of(appActions.error({ payload: JSON.stringify(error) }))

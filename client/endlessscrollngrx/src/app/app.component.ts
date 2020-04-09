@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
       const totalHeight = window.scrollY + window.innerHeight;
 
       if (totalHeight >= scrollHeight) {
-        console.log('scroll');
         this.store.dispatch(getMoreItems());
       }
     };
